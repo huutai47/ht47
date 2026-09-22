@@ -3,7 +3,7 @@ from bs4 import BeautifulSoup
 import datetime
 
 # 1. Định nghĩa nguồn lấy dữ liệu (Ví dụ giả định cấu trúc web bóng đá)
-SOURCE_URL = "https://example-sports-site.com" 
+SOURCE_URL = "https://khandai1.link/" 
 headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64)'}
 
 def get_match_streams():
