@@ -1,34 +1,234 @@
-name: Update IPTV M3U Playlist
+# This is a basic workflow to help you get started with Actions
+name: Auto merge and deploy files by schedules
 
+# Controls when the workflow will run
 on:
-  schedule:
-    # Chạy tự động sau mỗi 2 tiếng (Định dạng Cron)
-    - cron: '0 */2 * * *'
-  workflow_dispatch: # Cho phép nhấn nút chạy thủ công khi cần
+  repository_dispatch:
+    types: [trigger-thtt-from-cronjob]
+    
+  workflow_dispatch: # Allows you to run the action manually for testing
+  
+permissions:
+  contents: write # Required to push changes back to the repo
+  pages: write # Required to deploy github pages
+  id-token: write # Required to deploy github pages
 
+# Allow only one concurrent deployment, skipping runs queued between the run in-progress and latest queued.
+# However, do NOT cancel in-progress runs as we want to allow these production deployments to complete.
+concurrency:
+  group: github
+  cancel-in-progress: true
+  
 jobs:
-  build:
+  merge-commit-and-deploy:
     runs-on: ubuntu-latest
+    # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-    - name: Checkout mã nguồn
-      uses: actions/checkout@v3
+      # Start the job
+      - name: Start the job
+        run: |
+          echo Hello, world! 
 
-    - name: Cài đặt Python
-      uses: actions/setup-python@v4
-      with:
-        python-version: '3.x'
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - name: Checkout code
+        uses: actions/checkout@v4
+          
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v3
+        with:
+          python-version: "3.11"
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install requests tqdm aiohttp lxml pysocks selenium-wire
+      - name: Show current time
+        run: |
+          echo "Current datetime: $(date -u +'%Y-%m-%dT%H:%M:%SZ')"
+          python helloworld.py
+          git pull
+          
+      - name: Download file via curl
+        run: |
+          curl -s -k -H "Authorization: token ${{ secrets.MY_SECRET_PAT }}" -L -o ${{ secrets.NAME_THETHAO }} ${{ secrets.URL_PRIVATE_FILES_REPO }}/${{ secrets.NAME_THETHAO }}  & 
+          curl -s -k -H "Authorization: token ${{ secrets.MY_SECRET_PAT }}" -L -o xoilacztv.py ${{ secrets.URL_PRIVATE_FILES_REPO }}/python/xoilacztv.py  & 
+          curl -s -k -H "Authorization: token ${{ secrets.MY_SECRET_PAT }}" -L -o apisports.py ${{ secrets.URL_PRIVATE_FILES_REPO }}/python/apisports.py & 
+          curl -s -k -H "Authorization: token ${{ secrets.MY_SECRET_PAT }}" -L -o gavangtv.py ${{ secrets.URL_PRIVATE_FILES_REPO }}/python/gavangtv.py & 
+          curl -s -k -H "Authorization: token ${{ secrets.MY_SECRET_PAT }}" -L -o testproxies.py ${{ secrets.URL_PRIVATE_FILES_REPO }}/python/testproxies.py & 
+          curl -s -k -H "Authorization: token ${{ secrets.MY_SECRET_PAT }}" -L -o keys.json ${{ secrets.URL_PRIVATE_FILES_REPO }}/jsonfiles/keys.json & 
+          
+          wait
+          ls -lh
 
-    - name: Cài đặt thư viện phụ thuộc
-      run: |
-        pip install requests beautifulsoup4
+      - name: Download, get & convert links to M3U files
+        run: |
+          # if [ -f testproxies.py ]; then
+          #   python testproxies.py etc/proxies.txt &
+          # fi
+        
+          # if [ -f xoilacztv.py ]; then
+          #   # will overwrite previous xoilacztv, if the condition matches
+          #   # python xoilacztv.py https://xoilacz.vip xoilacztv.m3u  & 
+          #   python xoilacztv.py https://xoilacz.io xoilacztv.m3u  & 
+          # fi
 
-    - name: Chạy script cào dữ liệu
-      run: python main.py
+          # if [ -f gavangtv.py ]; then
+          #   python gavangtv.py https://gavanglink.org gavangtv.m3u &
+          # fi
+          
+          # if [ -f apisports.py ]; then
+          #   python apisports.py sutbong sutbongtv.m3u &
+          #   python apisports.py khandai khandaitv.m3u &
+          #   python apisports.py phalang phalangtv.m3u &
 
-    - name: Cam kết và cập nhật file M3U lên GitHub
-      run: |
-        git config --global user.name "GitHub Action Bot"
-        git config --global user.email "actions@github.com"
-        git add live_football.m3u
-        git commit -m "Cập nhật lịch bóng đá tự động: $(date)" || exit 0
-        git push
+          #   python apisports.py chuoichien chuoichientv.m3u &
+          #   python apisports.py saoke saoketv.m3u &
+          #   python apisports.py gavang33 gavang33tv.m3u &
+          #   python apisports.py giovang giovangtv.m3u &
+          #   python apisports.py cola colatv.m3u &
+          #   python apisports.py vuasanco vuasancotv.m3u &
+          #   python apisports.py biaom biaomtv.m3u &
+          #   python apisports.py s8tv s8tv.m3u &
+          # fi
+          
+          wait
+      
+      # Runs a set of commands using the runners shell
+      - name: Merge Files
+        # Combine base.m3u, tt.m3u and other m3u files into full.m3u
+        run: |
+          # delete old full.m3u, tt.m3u before merge
+          rm -f ${{ secrets.NAME_THTHETHAO }}
+          rm -f ${{ secrets.NAME_TTTHETHAO }}
+          mkdir -p src
+          ls -lh
+
+          if [ -f vuasancotv.m3u ]; then
+            echo " " >> ${{ secrets.NAME_TTTHETHAO }}
+            cat vuasancotv.m3u >> ${{ secrets.NAME_TTTHETHAO }}
+            echo " " >> ${{ secrets.NAME_TTTHETHAO }}
+          fi
+          if [ -f khandaitv.m3u ]; then
+            echo " " >> ${{ secrets.NAME_TTTHETHAO }}
+            cat khandaitv.m3u >> ${{ secrets.NAME_TTTHETHAO }}
+            echo " " >> ${{ secrets.NAME_TTTHETHAO }}
+          fi
+          if [ -f chuoichientv.m3u ]; then
+            echo " " >> ${{ secrets.NAME_TTTHETHAO }}
+            cat chuoichientv.m3u >> ${{ secrets.NAME_TTTHETHAO }}
+            echo " " >> ${{ secrets.NAME_TTTHETHAO }}
+          fi
+          if [ -f giovangtv.m3u ]; then
+            echo " " >> ${{ secrets.NAME_TTTHETHAO }}
+            cat giovangtv.m3u >> ${{ secrets.NAME_TTTHETHAO }}
+            echo " " >> ${{ secrets.NAME_TTTHETHAO }}
+          fi
+          if [ -f biaomtv.m3u ]; then
+            echo " " >> ${{ secrets.NAME_TTTHETHAO }}
+            cat biaomtv.m3u >> ${{ secrets.NAME_TTTHETHAO }}
+            echo " " >> ${{ secrets.NAME_TTTHETHAO }}
+          fi
+          if [ -f s8tv.m3u ]; then
+            echo " " >> ${{ secrets.NAME_TTTHETHAO }}
+            cat s8tv.m3u >> ${{ secrets.NAME_TTTHETHAO }}
+            echo " " >> ${{ secrets.NAME_TTTHETHAO }}
+          fi
+          if [ -f saoketv.m3u ]; then
+            echo " " >> ${{ secrets.NAME_TTTHETHAO }}
+            cat saoketv.m3u >> ${{ secrets.NAME_TTTHETHAO }}
+            echo " " >> ${{ secrets.NAME_TTTHETHAO }}
+          fi
+          if [ -f xoilacztv.m3u ]; then
+            echo " " >> ${{ secrets.NAME_TTTHETHAO }}
+            cat xoilacztv.m3u >> ${{ secrets.NAME_TTTHETHAO }}
+            echo " " >> ${{ secrets.NAME_TTTHETHAO }}
+          fi         
+          if [ -f gavang33tv.m3u ]; then
+            echo " " >> ${{ secrets.NAME_TTTHETHAO }}
+            cat gavang33tv.m3u >> ${{ secrets.NAME_TTTHETHAO }}
+            echo " " >> ${{ secrets.NAME_TTTHETHAO }}
+          fi
+          if [ -f colatv.m3u ]; then
+            echo " " >> ${{ secrets.NAME_TTTHETHAO }}
+            cat colatv.m3u >> ${{ secrets.NAME_TTTHETHAO }}
+            echo " " >> ${{ secrets.NAME_TTTHETHAO }}
+          fi
+          if [ -f sutbongtv.m3u ]; then
+            echo " " >> ${{ secrets.NAME_TTTHETHAO }}
+            cat sutbongtv.m3u >> ${{ secrets.NAME_TTTHETHAO }}
+            echo " " >> ${{ secrets.NAME_TTTHETHAO }}
+          fi
+          if [ -f gavangtv.m3u ]; then
+            echo " " >> ${{ secrets.NAME_TTTHETHAO }}
+            cat gavangtv.m3u >> ${{ secrets.NAME_TTTHETHAO }}
+            echo " " >> ${{ secrets.NAME_TTTHETHAO }}
+          fi
+          if [ -f phalangtv.m3u ]; then
+            echo " " >> ${{ secrets.NAME_TTTHETHAO }}
+            cat phalangtv.m3u >> ${{ secrets.NAME_TTTHETHAO }}
+            echo " " >> ${{ secrets.NAME_TTTHETHAO }}
+          fi
+
+          if [ -f ${{ secrets.NAME_THETHAO }} ]; then
+            cat ${{ secrets.NAME_THETHAO }} > ${{ secrets.NAME_THTHETHAO }}
+          fi 
+          echo " " >> ${{ secrets.NAME_THTHETHAO }}
+          if [ -f ${{ secrets.NAME_TTTHETHAO }} ]; then
+            cat ${{ secrets.NAME_TTTHETHAO }} >> ${{ secrets.NAME_THTHETHAO }}
+          fi
+          echo " " >> ${{ secrets.NAME_THTHETHAO }}
+          # ls -lh
+
+          echo "Last updated: $(date -u +'%Y-%m-%dT%H:%M:%SZ')" > lastupdated.txt
+
+          [ -f ${{ secrets.NAME_THTHETHAO }} ] && cp ${{ secrets.NAME_THTHETHAO }} src/
+          [ -f ${{ secrets.NAME_THETHAO }} ] && cp ${{ secrets.NAME_THETHAO }} src/
+          # [ -f ${{ secrets.NAME_TTTHETHAO }} ] && cp ${{ secrets.NAME_TTTHETHAO }} src/
+
+          [ -f keys.json ] && cp keys.json src/
+          
+          ls -lh src/
+
+          
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+        
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v4
+        with:
+          retention-days: 0
+          # Upload in src/ folder only
+          path: 'src/'
+
+      - name: Retry Deployment on Failure
+        id: deployment
+        uses: Wandalen/wretry.action@v3
+        with:
+          action: actions/deploy-pages@v5  # Swap this out for your specific deployment action
+          attempt_limit: 3
+          attempt_delay: 3
+    
+      # - name: Deploy to GitHub Pages
+      #   id: deployment
+      #   uses: actions/deploy-pages@v5        
+
+      - name: Delete artifact validation file
+        uses: geekyeggo/delete-artifact@v6
+        with:
+          name: |
+              github-pages.zip
+              github-pages
+          failOnError: false
+      
+      - name: Commit and push changes
+        run: |
+          git config --local user.name "thcoban [bot]"
+          git add lastupdated.txt
+          # git add etc/testing/host.txt
+
+          echo "checking any changes"
+          if git diff --staged --quiet; then
+            echo "[test only] No changes detected."
+          fi
+          
+          git pull
+          git commit --allow-empty -m "[no ci] Update repo" && git push
