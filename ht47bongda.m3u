@@ -6,3 +6,6 @@ https://ivs-23-play.sagion.top/live/955b0d2a9428.m3u8
 #EXTINF:-1 group-title="🔴 ⚽ 🏐 NÉM BIÊN TV" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSUp0gm_DZGG6o4M1ZkucbSjAVp3tdVoL1qgacMXFFNgMmsd9ehQFpDrfQ&s=10", BLV Lavie
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36
 https://ivs-23-play.sagion.top/live/0e4b6e8b6ca611.m3u8
+#EXTINF:-1 group-title="🔴 ⚽ 🏐 NÉM BIÊN TV" tvg-logo="https://khandaia.one/assets/image/nblogo.png", BLV KaKa2
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36
+https://ivs-23-play.sagion.top/live/f6ad6939e01e39.m3u8
