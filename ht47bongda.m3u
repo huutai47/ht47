@@ -1,8 +1,8 @@
 #EXTM3U x-tvg-name="HT47bongda" name="HT47bongda"
 
-#EXTINF:-1 group-title="🔴 ⚽ 🏐 KHÁN ĐÀI TV" tvg-logo="https://khandai1.link/images/logo-220.webp", BLV KaKa
+#EXTINF:-1 group-title="🔴 ⚽ 🏐 KHÁN ĐÀI TV" tvg-logo="https://khandaia.one/assets/image/nblogo.png", BLV KaKa
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36
-https://luong.phaohoa.live/live/phaohoa7/index.m3u8
+https://ivs-23-play.sagion.top/live/955b0d2a9428.m3u8
 #EXTINF:-1 group-title="🔴 ⚽ 🏐 KHÁN ĐÀI TV" tvg-logo="https://khandai1.link/images/logo-220.webp", BLV Tày
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36
 https://luong.phaohoa.live/live/phaohoa8/index.m3u8
