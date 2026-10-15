@@ -1,32 +1,32 @@
 #EXTM3U x-tvg-name="HT47bongda" name="HT47bongda"
 
-#EXTINF:-1 group-title="🔴 ⚽ 🏐 KHÁN ĐÀI TV" tvg-logo="https://khandaia.one/assets/image/nblogo.png", BLV KaKa
+#EXTINF:-1 group-title="🔴 ⚽ 🏐 NÉM BIÊN TV" tvg-logo="https://khandaia.one/assets/image/nblogo.png", BLV KaKa
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36
 https://ivs-23-play.sagion.top/live/955b0d2a9428.m3u8
-#EXTINF:-1 group-title="🔴 ⚽ 🏐 KHÁN ĐÀI TV" tvg-logo="https://khandai1.link/images/logo-220.webp", BLV Tày
+#EXTINF:-1 group-title="🔴 ⚽ 🏐 NÉM BIÊN TV" tvg-logo="https://khandaia.one/assets/image/nblogo.png", BLV Tày
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36
 https://luong.phaohoa.live/live/phaohoa8/index.m3u8
-#EXTINF:-1 group-title="🔴 ⚽ 🏐 KHÁN ĐÀI TV" tvg-logo="https://khandai1.link/images/logo-220.webp", BLV Lee Sin
+#EXTINF:-1 group-title="🔴 ⚽ 🏐 NÉM BIÊN TV" tvg-logo="https://khandaia.one/assets/image/nblogo.png", BLV Lee Sin
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36
 https://luong.phaohoa.live/live/phaohoa10/index.m3u8
-#EXTINF:-1 group-title="🔴 ⚽ 🏐 KHÁN ĐÀI TV" tvg-logo="https://khandai1.link/images/logo-220.webp", BLV Chim Nhỏ
+#EXTINF:-1 group-title="🔴 ⚽ 🏐 NÉM BIÊN TV" tvg-logo="https://khandaia.one/assets/image/nblogo.png", BLV Chim Nhỏ
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36
 https://luong.phaohoa.live/live/phaohoa5/index.m3u8
-#EXTINF:-1 group-title="🔴 ⚽ 🏐 KHÁN ĐÀI TV" tvg-logo="https://khandai1.link/images/logo-220.webp", BLV Enzo
+#EXTINF:-1 group-title="🔴 ⚽ 🏐 NÉM BIÊN TV" tvg-logo="https://khandaia.one/assets/image/nblogo.png", BLV Enzo
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36
 https://luong.phaohoa.live/live/phaohoa2/index.m3u8
-#EXTINF:-1 group-title="🔴 ⚽ 🏐 KHÁN ĐÀI TV" tvg-logo="https://khandai1.link/images/logo-220.webp", BLV Kền Kền
+#EXTINF:-1 group-title="🔴 ⚽ 🏐 NÉM BIÊN TV" tvg-logo="https://khandaia.one/assets/image/nblogo.png", BLV Kền Kền
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36
 https://luong.phaohoa.live/live/phaohoa6/index.m3u8
-#EXTINF:-1 group-title="🔴 ⚽ 🏐 KHÁN ĐÀI TV" tvg-logo="https://khandai1.link/images/logo-220.webp", BLV Người Kiến
+#EXTINF:-1 group-title="🔴 ⚽ 🏐 NÉM BIÊN TV" tvg-logo="https://khandaia.one/assets/image/nblogo.png", BLV Người Kiến
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36
 https://luong.phaohoa.live/live/phaohoa1/index.m3u8
-#EXTINF:-1 group-title="🔴 ⚽ 🏐 KHÁN ĐÀI TV" tvg-logo="https://khandai1.link/images/logo-220.webp", BLV Pháo Thủ
+#EXTINF:-1 group-title="🔴 ⚽ 🏐 NÉM BIÊN TV" tvg-logo="https://khandaia.one/assets/image/nblogo.png", BLV Pháo Thủ
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36
 https://luong.phaohoa.live/live/phaohoa4/index.m3u8
-#EXTINF:-1 group-title="🔴 ⚽ 🏐 KHÁN ĐÀI TV" tvg-logo="https://khandai1.link/images/logo-220.webp", BLV Tiểu Mây
+#EXTINF:-1 group-title="🔴 ⚽ 🏐 NÉM BIÊN TV" tvg-logo="https://khandaia.one/assets/image/nblogo.png", BLV Tiểu Mây
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36
 https://luong.phaohoa.live/live/phaohoa9/index.m3u8
-#EXTINF:-1 group-title="🔴 ⚽ 🏐 KHÁN ĐÀI TV" tvg-logo="https://khandai1.link/images/logo-220.webp", BLV Văn Minh
+#EXTINF:-1 group-title="🔴 ⚽ 🏐 NÉM BIÊN TV" tvg-logo="https://khandaia.one/assets/image/nblogo.png", BLV Văn Minh
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36
 https://luong.phaohoa.live/live/phaohoa3/index.m3u8
