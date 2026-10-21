@@ -3,6 +3,22 @@
 #EXTINF:-1 group-title="🔴 ⚽ 🏐 XOILACZ TV" tvg-logo="https://xoilaczzzs.cc/wp-content/themes/bongda/dist/images/logo-xlz.png", BLV TYSON
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36
 https://live2.domaincdn.cc/livecdn/channel-33.flv?auth_key=3000001792579878-0-0-0580d3e913d6259128ce2b387c70a24e
+#EXTINF:-1 group-title="🔴 ⚽ 🏐 XOILACZ TV" tvg-logo="https://xoilaczzzs.cc/wp-content/themes/bongda/dist/images/logo-xlz.png", BLV ROY
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36
+https://live2.domaincdn.cc/livecdn/channel-1.flv?auth_key=3000001792580822-0-0-36dbde64653cfd4e54b28abbdde7da8d
+#EXTINF:-1 group-title="🔴 ⚽ 🏐 XOILACZ TV" tvg-logo="https://xoilaczzzs.cc/wp-content/themes/bongda/dist/images/logo-xlz.png", BLV RIO
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36
+https://live2.domaincdn.cc/livecdn/channel-16.flv?auth_key=3000001792580918-0-0-e80e8a4ab71e4a021e1edb43f7d1dd98
+#EXTINF:-1 group-title="🔴 ⚽ 🏐 XOILACZ TV" tvg-logo="https://xoilaczzzs.cc/wp-content/themes/bongda/dist/images/logo-xlz.png", BLV MAX
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36
+https://live1.quickscoreboardz.com/live/channel6.flv?wsSecret=9ab2a1ed8b2fb0bedcb9a630bb15c0a4&wsABSTime=1792624173
+#EXTINF:-1 group-title="🔴 ⚽ 🏐 XOILACZ TV" tvg-logo="https://xoilaczzzs.cc/wp-content/themes/bongda/dist/images/logo-xlz.png", BLV NICK
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36
+https://live2.domaincdn.cc/livecdn/channel-5.flv?auth_key=3000001792581077-0-0-18bae37326c53c2fa11248ff5f4cff7f
+#EXTINF:-1 group-title="🔴 ⚽ 🏐 XOILACZ TV" tvg-logo="https://xoilaczzzs.cc/wp-content/themes/bongda/dist/images/logo-xlz.png", BLV FABIO
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36
+https://live2.domaincdn.cc/livecdn/channel-2.flv?auth_key=3000001792581155-0-0-e472dc7b7798cb0f3c87e0b86770c052
+
 #EXTINF:-1 group-title="🔴 ⚽ 🏐 NÉM BIÊN TV" tvg-logo="https://khandaia.one/assets/image/kakablv.png", BLV KaKa
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36
 https://ivsplay.saigon999.live/live/live04.m3u8
