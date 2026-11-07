@@ -27,6 +27,10 @@ https://play.saigon8386.live/live_5afc467f34a4a65b/index.m3u8
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36
 https://play.saigon8386.live/live_8e01a20967a65b5d/index.m3u8
 
+#EXTINF:-1 group-title="🔴 ⚽ 🏐 NÉM BIÊN TV" tvg-logo="https://cdn.lichngaytot.com/medias/amp/2019/7/30/Mo-thay-nang-co-y-nghia-gi-Nen-thu-van-may-voi-con-so-nao.jpg", BLV Nắng
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36
+https://gn-live.saigon999.live/123che/123che@hnstream.m3u8
+
 #EXTINF:-1 group-title="🔴 ⚽ 🏐 NÉM BIÊN TV" tvg-logo="https://i.ibb.co/vCcFS6vQ/signal-2026-10-21-150349.jpg", BLV Chè
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36
 https://ivsplay.saigon999.live/live/live06.m3u8
